@@ -75,7 +75,12 @@ function createWindow(sendToRenderer, geminiSessionRef, randomNames = null) {
         mainWindow.setAlwaysOnTop(true, 'screen-saver', 1);
     }
 
-    mainWindow.loadFile(path.join(__dirname, '../index.html'));
+    // Load the React app
+    if (process.env.NODE_ENV === 'development') {
+        mainWindow.loadURL('http://localhost:5173');
+    } else {
+        mainWindow.loadFile(path.join(__dirname, '../frontend/dist/index.html'));
+    }
 
     // Set window title to random name if provided
     if (randomNames && randomNames.windowTitle) {

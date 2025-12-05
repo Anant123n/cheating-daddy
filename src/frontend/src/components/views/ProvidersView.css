@@ -1,0 +1,114 @@
+.providers-view {
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+    color: var(--text-color);
+}
+
+.providers-header {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.providers-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.providers-header p {
+    color: var(--description-color);
+    font-size: 14px;
+}
+
+.providers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    padding-bottom: 20px;
+}
+
+.provider-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.provider-card:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.provider-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.card-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.provider-description {
+    font-size: 14px;
+    color: var(--description-color);
+    line-height: 1.5;
+    margin-bottom: 16px;
+    flex: 1;
+}
+
+.provider-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.feature-tag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.visit-button {
+    background: var(--button-background);
+    color: var(--text-color);
+    border: 1px solid var(--button-border);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.visit-button:hover {
+    background: var(--hover-background);
+    border-color: var(--focus-border-color);
+}
